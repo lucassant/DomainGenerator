@@ -1,28 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <b-navbar toggleable="sm" type="light" variant="light">
+      <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
+
+      <b-navbar-brand>BootstrapVue</b-navbar-brand>
+
+      <b-collapse id="nav-text-collapse" is-nav>
+        <b-navbar-nav>
+          <b-nav-text>Navbar text</b-nav-text>
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
+    <Home />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Home from "@/components/Home";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  components: { Home },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
